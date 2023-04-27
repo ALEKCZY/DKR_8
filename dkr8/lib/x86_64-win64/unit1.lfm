@@ -1,0 +1,142 @@
+object Form1: TForm1
+  Left = 162
+  Height = 453
+  Top = 161
+  Width = 748
+  Caption = 'Form1'
+  ClientHeight = 453
+  ClientWidth = 748
+  Constraints.MaxHeight = 521
+  Constraints.MaxWidth = 885
+  Constraints.MinHeight = 453
+  Constraints.MinWidth = 748
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object edtPrincipal: TEdit
+    AnchorSideRight.Control = edtRate
+    Left = 83
+    Height = 28
+    Top = 104
+    Width = 158
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 23
+    MaxLength = 10
+    OnKeyPress = edtPrincipalKeyPress
+    TabOrder = 0
+  end
+  object edtRate: TEdit
+    AnchorSideRight.Control = edtTime
+    AnchorSideBottom.Control = memResult
+    Left = 264
+    Height = 28
+    Top = 104
+    Width = 172
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 31
+    BorderSpacing.Bottom = 24
+    MaxLength = 10
+    OnKeyPress = edtRateKeyPress
+    TabOrder = 1
+  end
+  object edtTime: TEdit
+    AnchorSideBottom.Control = lblProcent
+    Left = 467
+    Height = 28
+    Top = 104
+    Width = 172
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 20
+    MaxLength = 10
+    OnKeyPress = edtTimeKeyPress
+    TabOrder = 2
+  end
+  object lblPrincipal: TLabel
+    AnchorSideBottom.Control = edtPrincipal
+    Left = 83
+    Height = 22
+    Top = 56
+    Width = 173
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 26
+    Caption = 'Начальная сумма (руб.)'
+    ParentColor = False
+  end
+  object lblRate: TLabel
+    AnchorSideBottom.Control = edtRate
+    Left = 264
+    Height = 27
+    Top = 56
+    Width = 167
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 21
+    Caption = 'Процентная ставка (%)'
+    ParentColor = False
+  end
+  object lblTime: TLabel
+    AnchorSideBottom.Control = edtTime
+    Left = 467
+    Height = 29
+    Top = 56
+    Width = 102
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 19
+    Caption = 'Время (сутки)'
+    ParentColor = False
+  end
+  object btnCalculate: TButton
+    Left = 272
+    Height = 41
+    Top = 280
+    Width = 167
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Посчитать'
+    OnClick = btnCalculateClick
+    TabOrder = 3
+  end
+  object cbxCalculationType: TComboBox
+    Left = 467
+    Height = 28
+    Top = 184
+    Width = 185
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 20
+    ItemWidth = 20
+    TabOrder = 4
+  end
+  object memResult: TMemo
+    AnchorSideRight.Control = cbxCalculationType
+    AnchorSideBottom.Control = btnCalculate
+    Left = 264
+    Height = 95
+    Top = 156
+    Width = 172
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 31
+    BorderSpacing.Bottom = 29
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object lblProcent: TLabel
+    AnchorSideBottom.Control = cbxCalculationType
+    Left = 467
+    Height = 20
+    Top = 152
+    Width = 79
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 12
+    Caption = 'Проценты'
+    ParentColor = False
+  end
+  object btnClose: TBitBtn
+    Left = 585
+    Height = 46
+    Top = 390
+    Width = 148
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Выход'
+    ModalResult = 3
+    OnClick = btnCloseClick
+    TabOrder = 6
+  end
+end
